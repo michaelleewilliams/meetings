@@ -1,8 +1,11 @@
 getdata1 <- function(n){
-  init = rnorm(n,130,5)
-  init = init + runif(1, 0,abs(init-130))
-  final = rnorm(n,130,10)
-  final = final + runif(1, 0,abs(final-130))
-  diff = init - final
-  return(cbind(init,final))
+  control = rnorm(n, 130,10)
+  med = rnorm(n,130,2)
+  return(cbind(control,med))
+}
+
+getdata2 <- function(n){
+  control = rnorm(n, 130,10)
+  med = rnorm(n, 119,10)
+  return(cbind(control,med))
 }
